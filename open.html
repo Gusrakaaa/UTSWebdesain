@@ -1,0 +1,83 @@
+    <!DOCTYPE html>
+    <html>
+        <script>
+            alert("Welcome")
+        </script>
+        <head>
+            <title>Vacataion Web</title>
+            <style type="text/css">
+                body{
+                    overflow-y: hidden;
+                    margin: 0;
+                    padding: 0;
+                    font-family: Verdana;
+                    background-color: #919191;
+                }
+                form {
+                    font-family: arial;
+                    background-color: rgb(255,255,255,0.7);
+                    width: 300px;
+                    margin: 180px auto;
+                    padding: 30px;
+                    text-align: right;
+                    color: #2d2d2d;
+                    border-radius: 40px 10px;
+                    box-shadow: 2px 2px 7px #393939;
+                }
+                input {
+                    margin: 10px;
+                }
+                input.login {
+                    background-color: #2E4C6D;
+                    color: #ffffff;
+                    font-family: verdana;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+                    margin: 30px 10px auto 0px;
+                    text-transform: uppercase;
+                    transition: .2s;
+                }
+                input.login:hover {
+                    background-color: #aab2b9;
+                    color: #cdcdcd;
+                }
+                p {
+                    text-align: center;
+                    margin: 50px auto;
+                    margin-top: 10px;
+                    padding: 10px;
+                    font-weight: bold;
+                    color: #15151a;
+                    font-family: Verdana;
+                    background-color: salmon;
+                    border-radius: 20px;
+                }
+            </style>
+        </head>
+        <body>
+            <form action="open.html" method="get" id="myForm" onsubmit=" return validasi()">
+                <p>Welcome To Vacation Web</p>
+                username <input type="text" name="username" placeholder="username">
+                password <input type="password" name="password" placeholder="password">
+                <input class="Login" type="submit" name="submit" value="login">
+            </form>
+        </body>
+        <script type="text/javascript">
+            function validasi(){
+                var username = Document.form["myForm"]["password"].value;
+                var password = Document.form["myForm"]["password"].value;
+                if( username == "user" && password == "123"){
+                    return true;
+                }
+                else if(username =="" || password==""){
+                    alert (masukan username dan password anda !);
+                    return false;
+                }
+                else {
+                    alert ("username atau password anda SALAH");
+                    return false;
+                }
+            }
+        </script>
+    </html>
